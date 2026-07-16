@@ -4,20 +4,20 @@ Personal portfolio website of **Jabulile Mashibini** — Azure-certified softwar
 professional and technical facilitator, targeting junior roles in **DevOps, Cloud, Software
 Engineering, and Full-Stack Development**.
 
-**Live site:** deployed on Azure Static Web Apps via GitHub Actions CI/CD.
+**Live site:** [jabulile1704.github.io/JM-Mashibini-Website-Portfolio-](https://jabulile1704.github.io/JM-Mashibini-Website-Portfolio-/)
 
 ## Tech Stack
 
 - **React 19** + **Vite** — component-based SPA
 - **react-icons** — iconography
 - **CSS custom properties** — theming, no CSS framework
-- **Azure Static Web Apps** — hosting
+- **GitHub Pages** — hosting
 - **GitHub Actions** — CI/CD (build + deploy on every push to `main`)
 
 ## Project Structure
 
 ```
-├── .github/workflows/    # Azure Static Web Apps CI/CD pipeline
+├── .github/workflows/    # GitHub Pages CI/CD pipeline
 ├── index.html            # Vite entry point
 ├── src/
 │   ├── data.js           # ✏️ All portfolio content — edit here
@@ -41,5 +41,5 @@ npm run build    # production build → dist/
 
 ## Deployment
 
-Every push to `main` triggers the GitHub Actions workflow, which builds the Vite app and
-deploys `dist/` to Azure Static Web Apps.
+Every push to `main` triggers the GitHub Actions workflow, which builds the Vite app with
+Node 22 and publishes `dist/` to the `gh-pages` branch, served by GitHub Pages.
