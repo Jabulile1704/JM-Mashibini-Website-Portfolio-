@@ -1,41 +1,52 @@
-import { profile } from '../data.js'
-import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub } from 'react-icons/fi'
-
-const items = [
-  { icon: <FiMail />, label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
-  { icon: <FiPhone />, label: 'Phone', value: profile.phone, href: `tel:+27${profile.phone.replace(/\s/g, '').slice(1)}` },
-  { icon: <FiMapPin />, label: 'Location', value: profile.location },
-  { icon: <FiLinkedin />, label: 'LinkedIn', value: 'jabulile-mashibini', href: profile.linkedin },
-  { icon: <FiGithub />, label: 'GitHub', value: 'Jabulile1704', href: profile.github },
-]
+import { contactIcons, profile } from '../data.js'
+import SectionHeading from './SectionHeading.jsx'
 
 export default function Contact() {
   return (
-    <section id="contact" className="section">
-      <h2 className="section__title">Get In Touch</h2>
-      <p className="section__subtitle">
-        Open to junior DevOps, cloud, software engineering &amp; full-stack opportunities
-      </p>
-
-      <div className="contact__grid">
-        {items.map(({ icon, label, value, href }) => (
-          <div className="contact-card" key={label}>
-            <span className="contact-card__icon">{icon}</span>
-            <span className="contact-card__label">{label}</span>
-            {href ? (
-              <a
-                className="contact-card__value"
-                href={href}
-                target={href.startsWith('http') ? '_blank' : undefined}
-                rel="noreferrer"
-              >
-                {value}
-              </a>
-            ) : (
-              <span className="contact-card__value">{value}</span>
-            )}
+    <section id="sec-contact" className="section section--last">
+      <SectionHeading number="07" file="contact.sh">
+        Let&apos;s<span className="accent">.</span>connect
+      </SectionHeading>
+      <div className="terminal">
+        <div className="terminal__header">bash — jabulile@portfolio:~</div>
+        <div className="terminal__body">
+          <div>
+            <span className="terminal__prompt">$</span> <span className="terminal__cmd">whoami</span>
           </div>
-        ))}
+          <div className="terminal__out">
+            Jabulile Mashibini — Junior Full Stack Developer, open to opportunities
+          </div>
+          <div className="terminal__gap">
+            <span className="terminal__prompt">$</span> <span className="terminal__cmd">cat contact.txt</span>
+          </div>
+          <div className="terminal__kv">
+            <span className="terminal__key">email</span>
+            <span className="terminal__eq">=</span> <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          </div>
+          <div className="terminal__kv">
+            <span className="terminal__key">phone</span>
+            <span className="terminal__eq">=</span> <span className="terminal__out">{profile.phone}</span>
+          </div>
+          <div className="terminal__kv terminal__kv--icon">
+            <span className="terminal__key">github</span>
+            <span className="terminal__eq">=</span>
+            <img src={contactIcons.github} alt="" width="15" height="15" />
+            <a href={profile.github} target="_blank" rel="noreferrer">
+              {profile.githubLabel}
+            </a>
+          </div>
+          <div className="terminal__kv terminal__kv--icon">
+            <span className="terminal__key">linkedin</span>
+            <span className="terminal__eq">=</span>
+            <img src={contactIcons.linkedin} alt="" width="15" height="15" />
+            <a href={profile.linkedin} target="_blank" rel="noreferrer">
+              {profile.linkedinLabel}
+            </a>
+          </div>
+          <div className="terminal__gap">
+            <span className="terminal__prompt">$</span> <span className="terminal__cursor">▊</span>
+          </div>
+        </div>
       </div>
     </section>
   )

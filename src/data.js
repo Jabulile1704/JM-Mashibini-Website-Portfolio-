@@ -1,259 +1,223 @@
 // ─────────────────────────────────────────────────────────────
 // All portfolio content lives here — edit this file to update
 // the site without touching any component code.
+// Copy and structure follow design_handoff_portfolio/README.md.
 // ─────────────────────────────────────────────────────────────
+
+const dev = (n) => `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${n}.svg`
+const si = (n, c = '3fe07f') => `https://cdn.simpleicons.org/${n}/${c}`
 
 export const profile = {
   name: 'Jabulile Mashibini',
-  headline: 'Software Engineering Facilitator · Cloud & DevOps Engineer',
-  tagline:
-    '12× cloud certified across Azure, AWS and OCI. I build production-grade software, automate its delivery, and teach the next generation of engineers to do the same.',
-  targetRoles: [
-    'Junior DevOps Engineer',
-    'Junior Cloud Engineer',
-    'Junior Software Engineer',
-    'Junior Full Stack Developer',
-  ],
-  location: 'Johannesburg / Cape Town, South Africa',
+  tab: 'jabulile_mashibini.dev',
   email: 'jabu.mashibs@gmail.com',
   phone: '060 613 1823',
-  linkedin: 'https://www.linkedin.com/in/jabulile-mashibini',
   github: 'https://github.com/Jabulile1704',
+  githubLabel: 'github.com/Jabulile1704',
+  linkedin: 'https://linkedin.com/in/jabulile-mashibini',
+  linkedinLabel: 'linkedin.com/in/jabulile-mashibini',
+  cvFile: 'Jabulile_Mashibini_CV_Junior_Full_Stack_Developer.pdf',
+  photo: 'https://github.com/Jabulile1704.png',
 }
 
-export const about = {
-  paragraphs: [
-    'I am an Azure-certified software engineering professional and technical facilitator with 14 industry certifications spanning cloud administration, development, security, and data — including AZ-104 Azure Administrator, AZ-204 Azure Developer, AWS Cloud Practitioner, and Oracle Cloud Infrastructure Foundations.',
-    'By day I deliver NQF Level 6 software engineering modules (C#, Java, ASP.NET Core, software design and testing) at CTU Training Solutions. Alongside that, I ship real products: MoTirong, a geo-verified biometric attendance platform built for a government client, runs on an ASP.NET Core + PostgreSQL backend I deploy to Azure with GitHub Actions CI/CD.',
-    'That combination is my edge — I don\'t just write code, I explain it, document it, and level up teams with it. I am now channelling that experience into a dedicated junior role in DevOps, cloud, or software engineering.',
-  ],
-  stats: [
-    { value: '14', label: 'Industry certifications' },
-    { value: '3', label: 'Cloud platforms (Azure · AWS · OCI)' },
-    { value: '150+', label: 'Learners trained & mentored' },
-    { value: '2', label: 'Flagship products shipped' },
-  ],
-  education: [
-    {
-      qualification: 'Advanced Diploma in Information Technology',
-      institution: 'Central University of Technology, Free State',
-      period: '2024 – 2025',
-    },
-    {
-      qualification: 'Diploma in Information Technology',
-      institution: 'Central University of Technology, Free State',
-      period: '2020 – 2023',
-    },
-  ],
-}
-
-export const skillCategories = [
-  {
-    title: 'Programming Languages',
-    icon: 'code',
-    skills: ['C#', 'Java', 'Python', 'JavaScript', 'Dart', 'SQL', 'C++ (Arduino)'],
-  },
-  {
-    title: 'Web & Mobile Development',
-    icon: 'web',
-    skills: [
-      'ASP.NET Core Web API',
-      'React',
-      'Flutter',
-      'REST APIs',
-      'Swagger / OpenAPI',
-      'HTML5',
-      'CSS3',
-      'JWT Authentication',
-    ],
-  },
-  {
-    title: 'Cloud & DevOps',
-    icon: 'cloud',
-    skills: [
-      'Microsoft Azure (VMs, Storage, App Services, VNets, Entra ID, AVD, Monitor)',
-      'AWS (Cloud Practitioner)',
-      'Oracle Cloud Infrastructure',
-      'GitHub Actions CI/CD',
-      'Firebase (Auth, Firestore)',
-      'Linux (Ubuntu)',
-      'Windows Server & Active Directory',
-      'Hyper-V Virtualisation',
-    ],
-  },
-  {
-    title: 'Databases',
-    icon: 'db',
-    skills: ['PostgreSQL', 'SQL / T-SQL', 'Cloud Firestore', 'Database design & ERDs'],
-  },
-  {
-    title: 'Tools & Platforms',
-    icon: 'tools',
-    skills: [
-      'Visual Studio / VS Code',
-      'Power BI (PL-300)',
-      'PowerApps',
-      'Microsoft Fabric (DP-700)',
-      'Azure DevOps (learning)',
-      'Arduino',
-    ],
-  },
-  {
-    title: 'Version Control & CI/CD',
-    icon: 'git',
-    skills: [
-      'Git & GitHub',
-      'Branching workflows & branch protection',
-      'GitHub Projects (sprint boards)',
-      'Code review practices',
-      'GitHub Actions build pipelines',
-      'Monorepo repository structure',
-    ],
-  },
-  {
-    title: 'Testing & Software Engineering',
-    icon: 'test',
-    skills: [
-      'MSTest (unit, integration & system testing)',
-      'Object-oriented design',
-      'SDLC & Agile / Scrum',
-      'Technical documentation',
-      'ISO/IEC 27001 & POPIA-aware design',
-      'Identity & access management (Entra ID)',
-    ],
-  },
+export const roles = [
+  'Junior Full Stack Developer',
+  'Flutter + ASP.NET Core Builder',
+  'Azure Certified (AZ-204)',
+  'Software Engineering Facilitator',
 ]
 
-// Ordered by relevance to Cloud, DevOps & Software Engineering careers
-export const certificationGroups = [
-  {
-    provider: 'Cloud Engineering & Administration',
-    certs: [
-      { name: 'Microsoft Certified: Azure Administrator Associate', code: 'AZ-104' },
-      { name: 'Microsoft Certified: Azure Developer Associate', code: 'AZ-204' },
-      { name: 'AWS Certified Cloud Practitioner', code: 'AWS CCP' },
-      { name: 'Oracle Cloud Infrastructure Foundations Associate', code: 'OCI' },
-      { name: 'Microsoft Certified: Azure Virtual Desktop Specialty', code: 'AZ-140' },
-      { name: 'Microsoft Certified: Azure Fundamentals', code: 'AZ-900' },
-    ],
-  },
-  {
-    provider: 'Security & Identity',
-    certs: [
-      { name: 'Microsoft Certified: Identity and Access Administrator Associate', code: 'SC-300' },
-      { name: 'Microsoft Certified: Security Operations Analyst Associate', code: 'SC-200' },
-      { name: 'Microsoft Certified: Security, Compliance & Identity Fundamentals', code: 'SC-900' },
-      { name: 'ISO/IEC 27001:2022 Information Security Implementation (training)', code: 'ISO 27001' },
-    ],
-  },
-  {
-    provider: 'Data & Analytics',
-    certs: [
-      { name: 'Microsoft Certified: Fabric Data Engineer Associate', code: 'DP-700' },
-      { name: 'Microsoft Certified: Power BI Data Analyst Associate', code: 'PL-300' },
-      { name: 'Microsoft Certified: Azure Data Fundamentals', code: 'DP-900' },
-    ],
-  },
-  {
-    provider: 'Programming & Instruction',
-    certs: [
-      { name: 'Cisco Python Essentials 1 & 2', code: 'Cisco' },
-      { name: 'Registered ETDP SETA Assessor', code: 'SETA' },
-      { name: 'Microsoft Certified Trainer', code: 'MCT', status: 'in progress' },
-    ],
-  },
+export const heroIntro =
+  'I build applications across the full stack — Flutter and web front ends, C#/ASP.NET Core and Python back ends, deployed on Azure. From a geo-verified attendance platform for government to a location-aware job-matching app, I ship real products end to end.'
+
+export const sectionIds = [
+  'sec-home',
+  'sec-about',
+  'sec-skills',
+  'sec-projects',
+  'sec-experience',
+  'sec-certs',
+  'sec-education',
+  'sec-contact',
 ]
 
-export const experience = [
+export const tree = [
+  { name: 'hello_world.tsx', icon: '⟨⟩', color: '#62d9d0', id: 'sec-home' },
+  { name: 'about.md', icon: '↓', color: '#e3b45c', id: 'sec-about' },
+  { name: 'skills.json', icon: '{}', color: '#e3b45c', id: 'sec-skills' },
+  { name: 'projects/', icon: '▸', color: '#3fe07f', id: 'sec-projects' },
+  { name: 'experience.log', icon: '≡', color: '#8fa896', id: 'sec-experience' },
+  { name: 'certifications.yml', icon: '✓', color: '#3fe07f', id: 'sec-certs' },
+  { name: 'education.cs', icon: '#', color: '#62d9d0', id: 'sec-education' },
+  { name: 'contact.sh', icon: '$', color: '#3fe07f', id: 'sec-contact' },
+]
+
+export const skills = [
   {
-    role: 'Software Engineering Facilitator',
-    company: 'CTU Training Solutions',
-    period: '2026 – Present',
-    bullets: [
-      'Deliver NQF Level 6 software engineering modules — C#, Java, ASP.NET/.NET, software design, and testing — taking cohorts from fundamentals to working, tested applications.',
-      'Authored the Git and GitHub version-control workflow documentation and training now adopted across learner teams, covering branching strategies, pull requests, and code review.',
-      'Built hands-on AZ-204 bootcamp lab environments in C# and ASP.NET Core, giving learners practical Azure development experience against real cloud resources.',
-      'Facilitate SDLC and Agile delivery on learner projects — sprint planning, iterative delivery, code quality gates, and documentation standards.',
-      'Mentor learners through environment, tooling, and deployment troubleshooting on practical projects, from broken builds to failed deployments.',
+    key: 'front_end',
+    items: [
+      { label: 'Flutter (Dart)', icon: dev('flutter/flutter-original') },
+      { label: 'JavaScript', icon: dev('javascript/javascript-original') },
+      { label: 'HTML5', icon: dev('html5/html5-original') },
+      { label: 'CSS3', icon: dev('css3/css3-original') },
+      { label: 'Responsive design' },
     ],
   },
   {
-    role: 'Software Development Facilitator',
-    company: 'WWISE',
-    period: '2025 – 2026',
-    bullets: [
-      'Trained 150+ learners in Python, JavaScript, HTML/CSS, and SQL, guiding practical software projects from requirements through delivery.',
-      'Taught Web API design and consumption alongside web development fundamentals.',
-      'Conducted assessments, moderation, and learner evaluations as a registered ETDP SETA Assessor.',
-      'Facilitated Power BI and PowerApps training for data analysis and low-code application development.',
-      'Integrated cloud security and secure coding principles into curriculum delivery.',
-      'Designed and authored an 8-week cloud computing curriculum covering Azure and OCI compute, storage, networking, and identity.',
+    key: 'back_end',
+    items: [
+      { label: 'C#', icon: dev('csharp/csharp-original') },
+      { label: 'ASP.NET Core Web API', icon: dev('dotnetcore/dotnetcore-original') },
+      { label: 'Python', icon: dev('python/python-original') },
+      { label: 'REST APIs' },
+      { label: 'Swagger/OpenAPI', icon: dev('swagger/swagger-original') },
+      { label: 'Java', icon: dev('java/java-original') },
     ],
   },
   {
-    role: 'Software Developer (Work-Integrated Learning)',
-    company: 'Central University of Technology',
-    period: '2023',
-    bullets: [
-      'Developed backend logic and assisted with frontend feature implementation on university software projects.',
-      'Worked with SQL databases and RESTful services; debugged and resolved application-level issues.',
+    key: 'databases',
+    items: [
+      { label: 'PostgreSQL', icon: dev('postgresql/postgresql-original') },
+      { label: 'SQL', icon: dev('azuresqldatabase/azuresqldatabase-original') },
+      { label: 'Firestore', icon: dev('firebase/firebase-plain') },
+      { label: 'Power BI' },
+    ],
+  },
+  {
+    key: 'auth_security',
+    items: [
+      { label: 'JWT + refresh tokens', icon: si('jsonwebtokens', 'a8e6bf') },
+      { label: 'Firebase Auth', icon: dev('firebase/firebase-plain') },
+      { label: 'Identity & access mgmt' },
+    ],
+  },
+  {
+    key: 'cloud',
+    items: [
+      { label: 'Azure App Services', icon: dev('azure/azure-original') },
+      { label: 'Azure Storage', icon: dev('azure/azure-original') },
+      { label: 'Entra ID', icon: dev('azure/azure-original') },
+      { label: 'Firebase', icon: dev('firebase/firebase-plain') },
+      { label: 'AWS fundamentals', icon: dev('amazonwebservices/amazonwebservices-plain-wordmark') },
+    ],
+  },
+  {
+    key: 'tools',
+    items: [
+      { label: 'Git', icon: dev('git/git-original') },
+      { label: 'GitHub Actions CI/CD', icon: si('githubactions', '62d9d0') },
+      { label: 'GitHub Projects', icon: si('github', 'a8e6bf') },
+      { label: 'Agile' },
+      { label: 'SDLC' },
+      { label: 'Testing' },
     ],
   },
 ]
 
 export const projects = [
   {
-    name: 'MoTirong — Geo-Verified Staff Attendance Platform',
-    type: 'Flagship · Government Client',
-    icon: '🕐',
+    folder: 'MoTirong/',
+    title: 'Geo-Verified Staff Attendance Platform',
     description:
-      'Cross-platform clock-in/clock-out system for the Mangaung Metro Municipality with mandatory geo-tagging and biometric fingerprint verification, including fallback strategies for workers with worn fingerprints. Delivered with sprint-based GitHub Projects boards, a protected monorepo, and GitHub Actions CI/CD; POPIA compliance is baked into the design.',
-    tech: ['Flutter', 'ASP.NET Core', 'PostgreSQL', 'Azure', 'JWT + Refresh', 'GitHub Actions', 'Swagger/OpenAPI'],
-    repo: 'https://github.com/Jabulile1704/motiroong-mobile',
+      'Cross-platform clock-in/clock-out app for the Mangaung Metro Municipality with mandatory geo-tagging and biometric fingerprint verification — including fallback strategies for worn fingerprints. Full engineering docs (ERD, use cases, API reference, backlog) and POPIA-compliant by design.',
+    bullets: [
+      'JWT auth with refresh tokens; Swagger/OpenAPI docs',
+      'GitHub Projects sprints + GitHub Actions CI/CD',
+      'Tested on physical Android devices via USB/ADB',
+    ],
+    tech: ['Flutter', 'ASP.NET Core', 'PostgreSQL', 'Azure', 'JWT'],
   },
   {
-    name: 'TiroMoMangaung — Local Job-Matching Platform',
-    type: 'Flagship · Community Impact',
-    icon: '💼',
+    folder: 'TiroMoMangaung/',
+    title: 'Local Job-Matching Platform',
     description:
-      'Flutter app connecting job seekers and employers across the Mangaung Metropolitan Municipality — a localised platform in the spirit of LinkedIn and Indeed. CV uploads, location-aware listings showing distance to each job, push notifications, application status tracking, and an admin dashboard.',
-    tech: ['Flutter', 'Dart', 'Firebase Auth', 'Cloud Firestore'],
-    repo: 'https://github.com/Jabulile1704',
-  },
-  {
-    name: 'MzansiPayrollSystem',
-    type: 'Desktop · Test Engineering',
-    icon: '🧾',
-    description:
-      'C# Windows Forms payroll system with a full MSTest suite — unit, integration, and system tests — demonstrating automated testing, assertions, and software validation on .NET.',
-    tech: ['C#', '.NET', 'Windows Forms', 'MSTest'],
-    repo: 'https://github.com/Jabulile1704/MzansiPayrollSystem',
-  },
-  {
-    name: 'Azure Administration Labs',
-    type: 'Cloud · Hands-On',
-    icon: '☁️',
-    description:
-      'Practical AZ-104 Azure administration labs covering identity, governance, compute, storage, and virtual networking — documented publicly on GitHub as reproducible walkthroughs.',
-    tech: ['Azure', 'Entra ID', 'Virtual Networking', 'Governance'],
-    repo: 'https://github.com/Jabulile1704/azure-virtual-networking',
-  },
-  {
-    name: 'RobotoRemote',
-    type: 'Desktop · Embedded',
-    icon: '🤖',
-    description:
-      'Windows Forms desktop application that connects to an Arduino Uno over USB serial, providing a real-time remote-control interface for individual hardware components.',
-    tech: ['C#', 'Windows Forms', 'Arduino', 'Serial I/O'],
-    repo: 'https://github.com/Jabulile1704/RobotoRemote',
-  },
-  {
-    name: 'Robotics Intro — Non-Blocking Arduino System',
-    type: 'Embedded · C++',
-    icon: '⚡',
-    description:
-      'Ultra-responsive, non-blocking Arduino system built in C++ featuring an interactive state machine that handles multi-function button inputs without ever blocking the main loop.',
-    tech: ['C++', 'Arduino', 'State Machines'],
-    repo: 'https://github.com/Jabulile1704/Robotics_Intro',
+      'Cross-platform Flutter app connecting job seekers with employers in the Mangaung region — a localised job-matching platform in the spirit of LinkedIn and Indeed, with location-aware listings showing distance to each job.',
+    bullets: [
+      'CV uploads, push notifications, in-app profile management',
+      'Admin dashboard for listings & applicants',
+      'Application status tracking: accepted / pending / declined',
+    ],
+    tech: ['Flutter', 'Firebase Auth', 'Firestore', 'Push Notifications'],
   },
 ]
+
+export const experience = [
+  {
+    hash: 'a7f3e2d',
+    period: '2026 – Present',
+    role: 'Software Engineering Facilitator',
+    company: 'CTU Training Solutions',
+    current: true,
+    bullets: [
+      'Deliver NQF Level 6 modules in software design & testing with C# and Java',
+      'Teach ASP.NET/.NET development, Git/GitHub, and code review practices',
+      'Built AZ-204 bootcamp labs with C# and ASP.NET Core',
+      'Facilitate SDLC, Agile, and software testing & QA training',
+    ],
+  },
+  {
+    hash: '3c91b04',
+    period: '2025 – 2026',
+    role: 'Software Development Facilitator',
+    company: 'WWISE',
+    current: false,
+    bullets: [
+      'Delivered training in Python, JavaScript, HTML/CSS, and SQL',
+      'Taught Web API design & consumption and modern web fundamentals',
+      'Facilitated Power BI and PowerApps for data-driven & low-code solutions',
+    ],
+  },
+]
+
+export const globeCodes = [
+  'AZ-204', 'AZ-104', 'AZ-140', 'AZ-900', 'SC-300', 'SC-200', 'SC-900',
+  'DP-700', 'DP-900', 'PL-300', 'AWS', 'OCI', 'CISCO', 'ISO', 'MCT',
+]
+
+export const certSummary = [
+  { count: '10×', label: 'Microsoft Certified' },
+  { count: '1×', label: 'AWS Cloud Practitioner' },
+  { count: '1×', label: 'Oracle Cloud Foundations' },
+  { count: '1×', label: 'Cisco Python Essentials' },
+  { count: '1×', label: 'ISO/IEC 27001:2022' },
+]
+
+const azIcon = dev('azure/azure-original')
+const isoIcon =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='%233fe07f' stroke-width='2'/%3E%3Cpath d='M7.5 12.5l3 3 6-6.5' fill='none' stroke='%233fe07f' stroke-width='2'/%3E%3C/svg%3E"
+
+export const certs = [
+  { code: 'AZ-204', name: 'Azure Developer Associate', icon: azIcon },
+  { code: 'AZ-104', name: 'Azure Administrator Associate', icon: azIcon },
+  { code: 'AZ-140', name: 'Azure Virtual Desktop Specialty', icon: azIcon },
+  { code: 'AZ-900', name: 'Azure Fundamentals', icon: azIcon },
+  { code: 'SC-300', name: 'Identity & Access Administrator Associate', icon: azIcon },
+  { code: 'SC-200', name: 'Security Operations Analyst Associate', icon: azIcon },
+  { code: 'SC-900', name: 'Security, Compliance & Identity Fundamentals', icon: azIcon },
+  { code: 'DP-700', name: 'Fabric Data Engineer Associate', icon: azIcon },
+  { code: 'DP-900', name: 'Azure Data Fundamentals', icon: azIcon },
+  { code: 'PL-300', name: 'Power BI Data Analyst Associate', icon: azIcon },
+  { code: 'AWS', name: 'Certified Cloud Practitioner', icon: dev('amazonwebservices/amazonwebservices-plain-wordmark') },
+  { code: 'OCI', name: 'Oracle Cloud Infrastructure Foundations', icon: dev('oracle/oracle-original') },
+  { code: 'CISCO', name: 'Python Essentials 1 & 2', icon: si('cisco', '62d9d0') },
+  { code: 'ISO', name: '27001:2022 InfoSec Implementation', icon: isoIcon },
+  { code: 'MCT', name: 'Microsoft Certified Trainer — in progress', icon: azIcon },
+]
+
+export const education = [
+  {
+    period: '2024 – 2025',
+    title: 'Advanced Diploma in Information Technology',
+    institution: 'Central University of Technology',
+  },
+  {
+    period: '2020 – 2023',
+    title: 'Diploma in Information Technology',
+    institution: 'Central University of Technology',
+  },
+]
+
+export const contactIcons = {
+  github: si('github', '6dff9e'),
+  linkedin: dev('linkedin/linkedin-original'),
+}

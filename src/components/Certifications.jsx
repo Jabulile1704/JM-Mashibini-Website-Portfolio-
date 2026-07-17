@@ -1,32 +1,47 @@
-import { certificationGroups } from '../data.js'
-import { FiShield } from 'react-icons/fi'
+import { certs, certSummary } from '../data.js'
+import CertGlobe from './CertGlobe.jsx'
+import SectionHeading from './SectionHeading.jsx'
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="section">
-      <h2 className="section__title">Certifications</h2>
-      <p className="section__subtitle">
-        14 industry credentials, ordered by relevance to cloud, DevOps &amp; software engineering
-      </p>
+    <section id="sec-certs" className="section">
+      <SectionHeading number="05" file="certifications.yml">
+        Certifications<span className="accent">[15]</span>
+      </SectionHeading>
+      <p className="certs__subtitle">Microsoft, AWS, Oracle and Cisco certified — cloud, security, identity and data.</p>
+
+      <div className="certs__globe-row">
+        <CertGlobe />
+        <div className="certs__status">
+          <div className="certs__status-label">
+            cert_globe<span className="certs__status-dim">.status</span>
+          </div>
+          <p>
+            Fifteen certifications orbiting one developer — spanning{' '}
+            <strong>Azure development &amp; administration</strong>, <strong>security &amp; identity</strong>, and{' '}
+            <strong>data engineering &amp; analytics</strong>.
+          </p>
+          <div className="certs__counts">
+            {certSummary.map(({ count, label }) => (
+              <div key={label}>
+                <span className="accent">▸</span> <span className="certs__count">{count}</span> {label}
+              </div>
+            ))}
+            <div>
+              <span className="certs__hourglass">⧗</span> MCT — in progress
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="certs__grid">
-        {certificationGroups.map(({ provider, certs }) => (
-          <div className="cert-card" key={provider}>
-            <div className="cert-card__provider">
-              <FiShield />
-              <h3>{provider}</h3>
-            </div>
-            <ul>
-              {certs.map(({ name, code, status }) => (
-                <li key={code} className="cert-card__item">
-                  <span className="cert-card__badge">{code}</span>
-                  <span>
-                    {name}
-                    {status && <em className="cert-card__status"> — {status}</em>}
-                  </span>
-                </li>
-              ))}
-            </ul>
+        {certs.map(({ code, name, icon }) => (
+          <div className="cert-row" key={code}>
+            <span className="cert-row__logo">
+              <span className="cert-row__logo-img" style={{ backgroundImage: `url("${icon}")` }} />
+            </span>
+            <span className="cert-row__badge">{code}</span>
+            <span className="cert-row__name">{name}</span>
           </div>
         ))}
       </div>
