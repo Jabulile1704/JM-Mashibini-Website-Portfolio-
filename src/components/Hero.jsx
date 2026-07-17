@@ -1,43 +1,42 @@
-import { profile } from '../data.js'
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
+import { heroIntro, roles } from '../data.js'
+import { useTypewriter } from '../hooks/useTypewriter.js'
+import MatrixRain from './MatrixRain.jsx'
 
-export default function Hero() {
+const SHOW_RAIN = true
+const RAIN_SPEED = 1
+const TYPING_EFFECT = true
+
+export default function Hero({ goTo }) {
+  const typed = useTypewriter(roles, { enabled: TYPING_EFFECT })
+
   return (
-    <section className="hero" id="top">
+    <section id="sec-home" className="hero">
+      <MatrixRain enabled={SHOW_RAIN} speed={RAIN_SPEED} />
       <div className="hero__content">
-        <p className="hero__greeting">👋 Hi, I&apos;m</p>
-        <h1 className="hero__name">{profile.name}</h1>
-        <p className="hero__headline">{profile.headline}</p>
-        <p className="hero__tagline">{profile.tagline}</p>
-
-        <ul className="hero__roles" aria-label="Target roles">
-          {profile.targetRoles.map((role) => (
-            <li key={role} className="chip">
-              {role}
-            </li>
-          ))}
-        </ul>
-
-        <div className="hero__cta">
-          <a href="#projects" className="btn btn--primary">
-            View My Work
-          </a>
-          <a href="#contact" className="btn btn--ghost">
-            Get In Touch
-          </a>
+        <div className="hero__comment">// hello_world.tsx</div>
+        <div className="hero__code">
+          const <span className="hero__code-name">developer</span> = {'{'}
         </div>
-
-        <div className="hero__social">
-          <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-            <FiGithub />
-          </a>
-          <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <FiLinkedin />
-          </a>
-          <a href={`mailto:${profile.email}`} aria-label="Email">
-            <FiMail />
-          </a>
+        <h1 className="hero__title">
+          Jabulile
+          <br />
+          Mashibini<span className="hero__underscore">_</span>
+        </h1>
+        <div className="hero__typed">
+          &gt; {typed}
+          <span className="hero__caret" />
         </div>
+        <p className="hero__intro">{heroIntro}</p>
+        <div className="hero__actions">
+          <button className="hero__btn hero__btn--solid" onClick={() => goTo('sec-projects')}>
+            ./view_projects
+          </button>
+          <button className="hero__btn hero__btn--outline" onClick={() => goTo('sec-contact')}>
+            ./contact_me
+          </button>
+          <span className="hero__cert-note">AZ-204 Azure Developer certified ✓</span>
+        </div>
+        <div className="hero__code hero__code--close">{'};'}</div>
       </div>
     </section>
   )

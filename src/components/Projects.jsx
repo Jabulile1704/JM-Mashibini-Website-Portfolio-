@@ -1,35 +1,48 @@
 import { projects } from '../data.js'
-import { FiGithub, FiExternalLink } from 'react-icons/fi'
+import SectionHeading from './SectionHeading.jsx'
+
+function FolderIcon() {
+  return (
+    <svg width="15" height="13" viewBox="0 0 20 17" fill="none" aria-hidden="true">
+      <path
+        d="M1 3.5C1 2.4 1.9 1.5 3 1.5h4l2 2.5h8c1.1 0 2 .9 2 2v7.5c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3.5z"
+        stroke="#3fe07f"
+        strokeWidth="1.5"
+      />
+    </svg>
+  )
+}
 
 export default function Projects() {
   return (
-    <section id="projects" className="section">
-      <h2 className="section__title">Featured Projects</h2>
-      <p className="section__subtitle">Real products for real users — including a government client</p>
-
-      <div className="projects__grid">
-        {projects.map(({ name, type, icon, description, tech, repo }) => (
-          <article className="project-card" key={name}>
-            <header className="project-card__header">
-              <span className="project-card__icon" aria-hidden="true">
-                {icon}
-              </span>
-              <div>
-                <h3>{name}</h3>
-                <p className="project-card__type">{type}</p>
-              </div>
+    <section id="sec-projects" className="section">
+      <SectionHeading number="03" file="projects/">
+        Flagship<span className="accent">.</span>projects
+      </SectionHeading>
+      <div className="projects">
+        {projects.map(({ folder, title, description, bullets, tech }) => (
+          <article className="project" key={folder}>
+            <header className="project__header">
+              <FolderIcon />
+              <span className="project__folder">{folder}</span>
+              <span className="project__pill">FLAGSHIP</span>
             </header>
-            <p className="project-card__description">{description}</p>
-            <ul className="project-card__tech">
-              {tech.map((t) => (
-                <li key={t} className="chip chip--small">
-                  {t}
-                </li>
-              ))}
-            </ul>
-            <a className="project-card__link" href={repo} target="_blank" rel="noreferrer">
-              <FiGithub /> View on GitHub <FiExternalLink />
-            </a>
+            <div className="project__body">
+              <h3>{title}</h3>
+              <p>{description}</p>
+              <ul>
+                {bullets.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+              <div className="project__tech">
+                {tech.map((t) => (
+                  <span className="tech-chip" key={t}>
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
           </article>
         ))}
       </div>
