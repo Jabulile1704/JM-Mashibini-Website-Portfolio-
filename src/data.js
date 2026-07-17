@@ -17,7 +17,7 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/jabulile-mashibini',
   linkedinLabel: 'linkedin.com/in/jabulile-mashibini',
   cvFile: 'Jabulile_Mashibini_CV_Junior_Full_Stack_Developer.pdf',
-  photo: 'https://github.com/Jabulile1704.png',
+  photo: `${import.meta.env.BASE_URL}jabulile.jpg`,
 }
 
 export const roles = [

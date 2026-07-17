@@ -12,7 +12,7 @@ export default function About() {
           <div className="about__photo-frame">
             <img className="about__photo" src={profile.photo} alt="Jabulile Mashibini" width="188" height="188" />
           </div>
-          <div className="about__photo-caption">jabulile.png · 200×200</div>
+          <div className="about__photo-caption">jabulile.jpg · 200×200</div>
         </div>
         <div className="about__text">
           <p>
