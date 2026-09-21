@@ -8,7 +8,10 @@ export default function Certifications() {
       <SectionHeading number="05" file="certifications.yml">
         Certifications<span className="accent">[{certs.length}]</span>
       </SectionHeading>
-      <p className="certs__subtitle">Microsoft, AWS, Oracle and Cisco certified — cloud, security, identity and data.</p>
+      <p className="certs__subtitle">
+        Microsoft Certified Trainer (MCT), plus Microsoft, AWS, Oracle and Cisco certified — cloud, AI, security,
+        identity and data.
+      </p>
 
       <div className="certs__globe-row">
         <CertGlobe />
