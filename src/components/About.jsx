@@ -27,8 +27,8 @@ export default function About() {
             connecting local job seekers with employers.
           </p>
           <p>
-            I hold 12+ Microsoft, AWS, Oracle and Cisco certifications and I&apos;m currently working toward
-            Microsoft Certified Trainer status. I&apos;m looking for a Junior Full Stack Developer role where I can
+            I hold 15 Microsoft, AWS, Oracle, Cisco and ISO certifications, including AZ-204 and AI-200,
+            and I&apos;m a Microsoft Certified Trainer (MCT). I&apos;m looking for a Junior Full Stack Developer role where I can
             build reliable, well-tested applications end to end.
           </p>
         </div>

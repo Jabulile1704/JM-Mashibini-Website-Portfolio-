@@ -706,6 +706,31 @@ button {
   font-size: 11.5px;
 }
 
+.project__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border);
+}
+
+.project__link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 12.5px;
+  padding: 5px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.project__link:hover,
+.project__link:focus-visible {
+  border-color: var(--green);
+  color: var(--green-bright);
+}
+
 /* ── Experience ──────────────────────────────────────── */
 .xp {
   display: flex;
@@ -859,10 +884,6 @@ button {
 
 .certs__count {
   color: #e2efe6;
-}
-
-.certs__hourglass {
-  color: var(--amber);
 }
 
 .certs__grid {

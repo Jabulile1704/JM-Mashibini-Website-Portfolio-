@@ -6,7 +6,7 @@ export default function Certifications() {
   return (
     <section id="sec-certs" className="section">
       <SectionHeading number="05" file="certifications.yml">
-        Certifications<span className="accent">[15]</span>
+        Certifications<span className="accent">[{certs.length}]</span>
       </SectionHeading>
       <p className="certs__subtitle">Microsoft, AWS, Oracle and Cisco certified — cloud, security, identity and data.</p>
 
@@ -17,9 +17,9 @@ export default function Certifications() {
             cert_globe<span className="certs__status-dim">.status</span>
           </div>
           <p>
-            Fifteen certifications orbiting one developer — spanning{' '}
-            <strong>Azure development &amp; administration</strong>, <strong>security &amp; identity</strong>, and{' '}
-            <strong>data engineering &amp; analytics</strong>.
+            {certs.length} certifications orbiting one developer — spanning{' '}
+            <strong>Azure development &amp; administration</strong>, <strong>security &amp; identity</strong>, {' '}
+            <strong>AI development</strong>, and <strong>data engineering &amp; analytics</strong>.
           </p>
           <div className="certs__counts">
             {certSummary.map(({ count, label }) => (
@@ -27,9 +27,6 @@ export default function Certifications() {
                 <span className="accent">▸</span> <span className="certs__count">{count}</span> {label}
               </div>
             ))}
-            <div>
-              <span className="certs__hourglass">⧗</span> MCT — in progress
-            </div>
           </div>
         </div>
       </div>

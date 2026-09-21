@@ -23,7 +23,8 @@ export const profile = {
 export const roles = [
   'Junior Full Stack Developer',
   'Flutter + ASP.NET Core Builder',
-  'Azure Certified (AZ-204)',
+  'Azure Certified (AZ-204 · AI-200)',
+  'Microsoft Certified Trainer',
   'Software Engineering Facilitator',
 ]
 
@@ -119,25 +120,33 @@ export const projects = [
     folder: 'MoTirong/',
     title: 'Geo-Verified Staff Attendance Platform',
     description:
-      'Cross-platform clock-in/clock-out app for the Mangaung Metro Municipality with mandatory geo-tagging and biometric fingerprint verification — including fallback strategies for worn fingerprints. Full engineering docs (ERD, use cases, API reference, backlog) and POPIA-compliant by design.',
+      'Cross-platform attendance system for the Mangaung Metro Municipality. Staff clock in and out with on-device biometric verification and GPS geofencing, so HR gets tamper-resistant, auditable records without raw biometric data ever leaving the phone. POPIA-conscious by design, with data hosted in africa-south1.',
     bullets: [
-      'JWT auth with refresh tokens; Swagger/OpenAPI docs',
-      'GitHub Projects sprints + GitHub Actions CI/CD',
-      'Tested on physical Android devices via USB/ADB',
+      'Server-authoritative design: clients never write, and Cloud Functions set timestamps and geofence verdicts',
+      'Passkey-style biometric sign-in: Keychain/Keystore device secret with hash verification and device binding',
+      '"Flag, don\'t refuse": off-site clock-ins are recorded and flagged for a supervisor to review, with a full audit trail',
+      'Next.js admin console for sites, employee approvals, exception reviews, CSV export and an audit log',
+      'Role-based access with custom claims, offline-first clock events and nightly stale-shift closing',
     ],
-    tech: ['Flutter', 'ASP.NET Core', 'PostgreSQL', 'Azure', 'JWT'],
+    tech: ['Flutter', 'Firebase', 'Cloud Functions', 'TypeScript', 'Firestore', 'Next.js'],
+    links: [
+      { label: 'mobile', href: 'https://github.com/Jabulile1704/motiroong-mobile' },
+      { label: 'backend', href: 'https://github.com/Jabulile1704/motiroong-backend' },
+      { label: 'admin', href: 'https://github.com/Jabulile1704/admin-motiroong' },
+    ],
   },
   {
     folder: 'TiroMoMangaung/',
     title: 'Local Job-Matching Platform',
     description:
-      'Cross-platform Flutter app connecting job seekers with employers in the Mangaung region — a localised job-matching platform in the spirit of LinkedIn and Indeed, with location-aware listings showing distance to each job.',
+      'Cross-platform Flutter + Firebase job marketplace connecting job seekers with employers in the Mangaung region, a localised take on LinkedIn and Indeed. Real-time listings are location-aware and show the distance to each job.',
     bullets: [
-      'CV uploads, push notifications, in-app profile management',
-      'Admin dashboard for listings & applicants',
-      'Application status tracking: accepted / pending / declined',
+      'Job seekers: profiles, filtered job search, saved jobs, CV uploads and application tracking',
+      'Employers: company verification, job posting, candidate review and interview scheduling',
+      'Real-time Firestore, push notifications, offline support and role-based security rules',
     ],
-    tech: ['Flutter', 'Firebase Auth', 'Firestore', 'Push Notifications'],
+    tech: ['Flutter', 'Firebase Auth', 'Firestore', 'Firebase Storage', 'Push Notifications'],
+    links: [{ label: 'source', href: 'https://github.com/Jabulile1704/TiroMoMangaung' }],
   },
 ]
 
@@ -170,12 +179,13 @@ export const experience = [
 ]
 
 export const globeCodes = [
-  'AZ-204', 'AZ-104', 'AZ-140', 'AZ-900', 'SC-300', 'SC-200', 'SC-900',
+  'AZ-204', 'AI-200', 'AZ-104', 'AZ-140', 'AZ-900', 'SC-300', 'SC-200', 'SC-900',
   'DP-700', 'DP-900', 'PL-300', 'AWS', 'OCI', 'CISCO', 'ISO', 'MCT',
 ]
 
 export const certSummary = [
-  { count: '10×', label: 'Microsoft Certified' },
+  { count: '11×', label: 'Microsoft Certified' },
+  { count: '1×', label: 'Microsoft Certified Trainer (MCT)' },
   { count: '1×', label: 'AWS Cloud Practitioner' },
   { count: '1×', label: 'Oracle Cloud Foundations' },
   { count: '1×', label: 'Cisco Python Essentials' },
@@ -188,6 +198,7 @@ const isoIcon =
 
 export const certs = [
   { code: 'AZ-204', name: 'Azure Developer Associate', icon: azIcon },
+  { code: 'AI-200', name: 'Azure AI Cloud Developer Associate', icon: azIcon },
   { code: 'AZ-104', name: 'Azure Administrator Associate', icon: azIcon },
   { code: 'AZ-140', name: 'Azure Virtual Desktop Specialty', icon: azIcon },
   { code: 'AZ-900', name: 'Azure Fundamentals', icon: azIcon },
@@ -201,7 +212,7 @@ export const certs = [
   { code: 'OCI', name: 'Oracle Cloud Infrastructure Foundations', icon: dev('oracle/oracle-original') },
   { code: 'CISCO', name: 'Python Essentials 1 & 2', icon: si('cisco', '62d9d0') },
   { code: 'ISO', name: '27001:2022 InfoSec Implementation', icon: isoIcon },
-  { code: 'MCT', name: 'Microsoft Certified Trainer — in progress', icon: azIcon },
+  { code: 'MCT', name: 'Microsoft Certified Trainer', icon: azIcon },
 ]
 
 export const education = [

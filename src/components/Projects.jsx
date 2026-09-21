@@ -20,7 +20,7 @@ export default function Projects() {
         Flagship<span className="accent">.</span>projects
       </SectionHeading>
       <div className="projects">
-        {projects.map(({ folder, title, description, bullets, tech }) => (
+        {projects.map(({ folder, title, description, bullets, tech, links = [] }) => (
           <article className="project" key={folder}>
             <header className="project__header">
               <FolderIcon />
@@ -42,6 +42,15 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+              {links.length > 0 && (
+                <div className="project__links">
+                  {links.map(({ label, href }) => (
+                    <a className="project__link" key={href} href={href} target="_blank" rel="noopener noreferrer">
+                      <span className="accent">git</span> {label} ↗
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </article>
         ))}

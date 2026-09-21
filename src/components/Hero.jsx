@@ -34,7 +34,7 @@ export default function Hero({ goTo }) {
           <button className="hero__btn hero__btn--outline" onClick={() => goTo('sec-contact')}>
             ./contact_me
           </button>
-          <span className="hero__cert-note">AZ-204 Azure Developer certified ✓</span>
+          <span className="hero__cert-note">AZ-204 · AI-200 · MCT certified ✓</span>
         </div>
         <div className="hero__code hero__code--close">{'};'}</div>
       </div>
