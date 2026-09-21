@@ -24,7 +24,8 @@ export default function About() {
           <p>
             My flagship work includes <strong>MoTirong</strong>, a geo-verified staff attendance platform built for
             the Mangaung Metro Municipality, and <strong>TiroMoMangaung</strong>, a location-aware job-matching app
-            connecting local job seekers with employers.
+            connecting local job seekers with employers. I&apos;ve also built a fully tested C# payroll system, a
+            desktop-to-Arduino hardware controller, and a Flutter salon booking app.
           </p>
           <p>
             I hold 15 Microsoft, AWS, Oracle, Cisco and ISO certifications, including AZ-204 and AI-200,

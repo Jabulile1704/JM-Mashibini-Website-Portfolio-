@@ -126,7 +126,7 @@ export const projects = [
       'Passkey-style biometric sign-in: Keychain/Keystore device secret with hash verification and device binding',
       '"Flag, don\'t refuse": off-site clock-ins are recorded and flagged for a supervisor to review, with a full audit trail',
       'Next.js admin console for sites, employee approvals, exception reviews, CSV export and an audit log',
-      'Role-based access with custom claims, offline-first clock events and nightly stale-shift closing',
+      'Role-based access with custom claims, admin-approved sign-ups and nightly stale-shift closing',
     ],
     tech: ['Flutter', 'Firebase', 'Cloud Functions', 'TypeScript', 'Firestore', 'Next.js'],
     links: [
@@ -147,6 +147,45 @@ export const projects = [
     ],
     tech: ['Flutter', 'Firebase Auth', 'Firestore', 'Firebase Storage', 'Push Notifications'],
     links: [{ label: 'source', href: 'https://github.com/Jabulile1704/TiroMoMangaung' }],
+  },
+  {
+    folder: 'FreshFadez/',
+    title: 'Salon Appointment Booking App',
+    description:
+      'Flutter front-end prototype for a hair salon booking app. Clients sign in, browse services and the stylist team, and manage their appointments from a clean, animated mobile UI. The UI is designed first, with the booking backend next on the roadmap.',
+    bullets: [
+      'Screens for login, home, services, "Our Team", my appointments and profile',
+      'Appointment list with status, pricing, and edit/cancel actions',
+      'Typed models for salons, services, stylists and appointments, plus custom animated widgets (spinning salon cards, animated login button)',
+    ],
+    tech: ['Flutter', 'Dart', 'Material Design', 'UI/UX'],
+    links: [{ label: 'source', href: 'https://github.com/Jabulile1704/fresh_fadez' }],
+  },
+  {
+    folder: 'MzansiPayrollSystem/',
+    title: 'Tested Payroll Management System',
+    description:
+      'C# Windows Forms payroll app for contractors that applies South African payroll rules: gross pay, UIF, PAYE with a dependant rebate, and a membership fee. It was built to be provably correct, with the business logic kept separate from the UI and tested at every level.',
+    bullets: [
+      'PayrollCalculator class kept separate from the WinForms UI for testability',
+      '6 MSTest tests covering unit, integration and full system workflows, all passing',
+      'Input validation with clear error messages and test logging via TestContext',
+    ],
+    tech: ['C#', '.NET Framework', 'Windows Forms', 'MSTest'],
+    links: [{ label: 'source', href: 'https://github.com/Jabulile1704/MzansiPayrollSystem' }],
+  },
+  {
+    folder: 'RobotoRemote/',
+    title: 'Arduino LED Remote Controller',
+    description:
+      'Windows Forms desktop app that controls an Arduino Uno over USB serial. Each button sends a command string over the COM port, and the Arduino sketch parses it to switch four LEDs on a breadboard, bridging desktop software with physical hardware.',
+    bullets: [
+      'COM port picker, live connection status and a clean port release on close',
+      'Individual and all-on/all-off LED control over a 9600-baud serial protocol',
+      'Arduino C++ sketch that parses newline-terminated commands into pin writes',
+    ],
+    tech: ['C#', 'Windows Forms', 'Arduino', 'C++', 'Serial / USB'],
+    links: [{ label: 'source', href: 'https://github.com/Jabulile1704/RobotoRemote' }],
   },
 ]
 
