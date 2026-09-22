@@ -1,43 +1,30 @@
-import { heroIntro, roles } from '../data.js'
-import { useTypewriter } from '../hooks/useTypewriter.js'
-import MatrixRain from './MatrixRain.jsx'
+import { heroIntro, profile } from '../data.js'
+import TransitMap from './TransitMap.jsx'
 
-const SHOW_RAIN = true
-const RAIN_SPEED = 1
-const TYPING_EFFECT = true
-
-export default function Hero({ goTo }) {
-  const typed = useTypewriter(roles, { enabled: TYPING_EFFECT })
-
+export default function Hero() {
   return (
-    <section id="sec-home" className="hero">
-      <MatrixRain enabled={SHOW_RAIN} speed={RAIN_SPEED} />
-      <div className="hero__content">
-        <div className="hero__comment">// hello_world.tsx</div>
-        <div className="hero__code">
-          const <span className="hero__code-name">developer</span> = {'{'}
+    <section id="top" className="hero">
+      <div className="hero__head">
+        <div>
+          <p className="eyebrow">Network map · {profile.role} · South Africa</p>
+          <h1 className="hero__title">{profile.name}</h1>
         </div>
-        <h1 className="hero__title">
-          Jabulile
+        <p className="hero__corner mono">
+          not to scale
           <br />
-          Mashibini<span className="hero__underscore">_</span>
-        </h1>
-        <div className="hero__typed">
-          &gt; {typed}
-          <span className="hero__caret" />
-        </div>
-        <p className="hero__intro">{heroIntro}</p>
-        <div className="hero__actions">
-          <button className="hero__btn hero__btn--solid" onClick={() => goTo('sec-projects')}>
-            ./view_projects
-          </button>
-          <button className="hero__btn hero__btn--outline" onClick={() => goTo('sec-contact')}>
-            ./contact_me
-          </button>
-          <span className="hero__cert-note">AZ-204 · AI-200 · MCT certified ✓</span>
-        </div>
-        <div className="hero__code hero__code--close">{'};'}</div>
+          rev. 2026.09
+        </p>
       </div>
+      <p className="hero__intro">{heroIntro}</p>
+      <div className="hero__actions">
+        <a className="btn btn--solid" href="#build">
+          See what I’ve built
+        </a>
+        <a className="btn btn--outline" href="#contact">
+          Get in touch
+        </a>
+      </div>
+      <TransitMap />
     </section>
   )
 }

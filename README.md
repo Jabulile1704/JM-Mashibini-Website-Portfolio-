@@ -9,8 +9,8 @@ Engineering, and Full-Stack Development**.
 ## Tech Stack
 
 - **React 19** + **Vite** — component-based SPA
-- **react-icons** — iconography
-- **CSS custom properties** — theming, no CSS framework
+- **CSS custom properties** — light and dark themes, no CSS framework
+- **Inline SVG** — the interactive transit map in `src/components/TransitMap.jsx`
 - **GitHub Pages** — hosting
 - **GitHub Actions** — CI/CD (build + deploy on every push to `main`)
 
@@ -23,13 +23,14 @@ Engineering, and Full-Stack Development**.
 │   ├── data.js           # ✏️ All portfolio content — edit here
 │   ├── App.jsx           # Section layout
 │   ├── index.css         # Design system & styles
-│   └── components/       # Nav, Hero, About, Skills, Certifications,
-│                         # Experience, Projects, Contact, Footer
+│   └── components/       # Header, Hero, TransitMap, About, BuildLine,
+│                         # CareerLine, CertLine, Contact
 └── package.json
 ```
 
-All content (bio, skills, certifications, experience, projects) lives in
-[`src/data.js`](src/data.js), so the site can be updated without touching component code.
+All content (bio, projects, career, certifications, tools) lives in
+[`src/data.js`](src/data.js), so the site can be updated without touching component code. Station positions on the map
+are set at the top of `TransitMap.jsx` and match the map in the GitHub profile README.
 
 ## Run Locally
 

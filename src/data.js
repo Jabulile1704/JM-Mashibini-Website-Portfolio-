@@ -1,15 +1,12 @@
 // ─────────────────────────────────────────────────────────────
-// All portfolio content lives here — edit this file to update
+// All portfolio content lives here. Edit this file to update
 // the site without touching any component code.
-// Copy and structure follow design_handoff_portfolio/README.md.
+// The transit map geometry lives in components/TransitMap.jsx.
 // ─────────────────────────────────────────────────────────────
-
-const dev = (n) => `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${n}.svg`
-const si = (n, c = '3fe07f') => `https://cdn.simpleicons.org/${n}/${c}`
 
 export const profile = {
   name: 'Jabulile Mashibini',
-  tab: 'jabulile_mashibini.dev',
+  role: 'Junior Full Stack Developer',
   email: 'jabu.mashibs@gmail.com',
   phone: '060 613 1823',
   github: 'https://github.com/Jabulile1704',
@@ -20,113 +17,30 @@ export const profile = {
   photo: `${import.meta.env.BASE_URL}jabulile.jpg`,
 }
 
-export const roles = [
-  'Junior Full Stack Developer',
-  'Flutter + ASP.NET Core Builder',
-  'Azure Certified (AZ-204 · AI-200)',
-  'Microsoft Certified Trainer',
-  'Software Engineering Facilitator',
-]
-
 export const heroIntro =
-  'I build applications across the full stack — Flutter and web front ends, C#/ASP.NET Core and Python back ends, deployed on Azure. From a geo-verified attendance platform for government to a location-aware job-matching app, I ship real products end to end.'
+  'I build full-stack apps, mostly Flutter on the front with Firebase, ASP.NET Core or Azure behind it, and I teach software engineering at CTU Training Solutions. This site is laid out like a train map: one line for the things I have built, one for work, one for certifications.'
 
-export const sectionIds = [
-  'sec-home',
-  'sec-about',
-  'sec-skills',
-  'sec-projects',
-  'sec-experience',
-  'sec-certs',
-  'sec-education',
-  'sec-contact',
+export const about = [
+  'I’m a software engineer and facilitator based in South Africa. During the day I teach C#, Java and full-stack development at CTU Training Solutions. The rest of the time I build complete applications, from requirements and ERDs through to CI/CD and a working release.',
+  'The project I’m proudest of is MoTiroong, a staff attendance platform for the Mangaung Metro Municipality where a clock-in only counts if your location and your fingerprint agree. Before that I built TiroMoMangaung, a job board for my area, and along the way a fully tested payroll system, a desktop remote for an Arduino and a salon booking app.',
+  'I’m looking for a junior full-stack role where I can ship reliable, well-tested software with a team.',
 ]
 
-export const tree = [
-  { name: 'hello_world.tsx', icon: '⟨⟩', color: '#62d9d0', id: 'sec-home' },
-  { name: 'about.md', icon: '↓', color: '#e3b45c', id: 'sec-about' },
-  { name: 'skills.json', icon: '{}', color: '#e3b45c', id: 'sec-skills' },
-  { name: 'projects/', icon: '▸', color: '#3fe07f', id: 'sec-projects' },
-  { name: 'experience.log', icon: '≡', color: '#8fa896', id: 'sec-experience' },
-  { name: 'certifications.yml', icon: '✓', color: '#3fe07f', id: 'sec-certs' },
-  { name: 'education.cs', icon: '#', color: '#62d9d0', id: 'sec-education' },
-  { name: 'contact.sh', icon: '$', color: '#3fe07f', id: 'sec-contact' },
-]
-
-export const skills = [
+// Build line, listed newest first. `id` matches the station on the map.
+export const builds = [
   {
-    key: 'front_end',
-    items: [
-      { label: 'Flutter (Dart)', icon: dev('flutter/flutter-original') },
-      { label: 'JavaScript', icon: dev('javascript/javascript-original') },
-      { label: 'HTML5', icon: dev('html5/html5-original') },
-      { label: 'CSS3', icon: dev('css3/css3-original') },
-      { label: 'Responsive design' },
-    ],
-  },
-  {
-    key: 'back_end',
-    items: [
-      { label: 'C#', icon: dev('csharp/csharp-original') },
-      { label: 'ASP.NET Core Web API', icon: dev('dotnetcore/dotnetcore-original') },
-      { label: 'Python', icon: dev('python/python-original') },
-      { label: 'REST APIs' },
-      { label: 'Swagger/OpenAPI', icon: dev('swagger/swagger-original') },
-      { label: 'Java', icon: dev('java/java-original') },
-    ],
-  },
-  {
-    key: 'databases',
-    items: [
-      { label: 'PostgreSQL', icon: dev('postgresql/postgresql-original') },
-      { label: 'SQL', icon: dev('azuresqldatabase/azuresqldatabase-original') },
-      { label: 'Firestore', icon: dev('firebase/firebase-plain') },
-      { label: 'Power BI' },
-    ],
-  },
-  {
-    key: 'auth_security',
-    items: [
-      { label: 'JWT + refresh tokens', icon: si('jsonwebtokens', 'a8e6bf') },
-      { label: 'Firebase Auth', icon: dev('firebase/firebase-plain') },
-      { label: 'Identity & access mgmt' },
-    ],
-  },
-  {
-    key: 'cloud',
-    items: [
-      { label: 'Azure App Services', icon: dev('azure/azure-original') },
-      { label: 'Azure Storage', icon: dev('azure/azure-original') },
-      { label: 'Entra ID', icon: dev('azure/azure-original') },
-      { label: 'Firebase', icon: dev('firebase/firebase-plain') },
-      { label: 'AWS fundamentals', icon: dev('amazonwebservices/amazonwebservices-plain-wordmark') },
-    ],
-  },
-  {
-    key: 'tools',
-    items: [
-      { label: 'Git', icon: dev('git/git-original') },
-      { label: 'GitHub Actions CI/CD', icon: si('githubactions', '62d9d0') },
-      { label: 'GitHub Projects', icon: si('github', 'a8e6bf') },
-      { label: 'Agile' },
-      { label: 'SDLC' },
-      { label: 'Testing' },
-    ],
-  },
-]
-
-export const projects = [
-  {
-    folder: 'MoTirong/',
-    title: 'Geo-Verified Staff Attendance Platform',
+    id: 'motiroong',
+    name: 'MoTiroong',
+    tagline: 'Geo-verified staff attendance for Mangaung Metro Municipality',
+    status: 'In build · government client',
+    flagship: true,
     description:
-      'Cross-platform attendance system for the Mangaung Metro Municipality. Staff clock in and out with on-device biometric verification and GPS geofencing, so HR gets tamper-resistant, auditable records without raw biometric data ever leaving the phone. POPIA-conscious by design, with data hosted in africa-south1.',
+      'Staff clock in and out with on-device biometric verification and GPS geofencing, so HR gets tamper-resistant, auditable records without raw biometric data ever leaving the phone. POPIA-conscious by design, with data hosted in africa-south1.',
     bullets: [
-      'Server-authoritative design: clients never write, and Cloud Functions set timestamps and geofence verdicts',
-      'Passkey-style biometric sign-in: Keychain/Keystore device secret with hash verification and device binding',
-      '"Flag, don\'t refuse": off-site clock-ins are recorded and flagged for a supervisor to review, with a full audit trail',
+      'Server-authoritative: clients never write directly, Cloud Functions set timestamps and geofence verdicts',
+      'Passkey-style biometric sign-in with a Keychain/Keystore device secret, hash verification and device binding',
+      'Flag, don’t refuse: off-site clock-ins are recorded and flagged for a supervisor, with a full audit trail',
       'Next.js admin console for sites, employee approvals, exception reviews, CSV export and an audit log',
-      'Role-based access with custom claims, admin-approved sign-ups and nightly stale-shift closing',
     ],
     tech: ['Flutter', 'Firebase', 'Cloud Functions', 'TypeScript', 'Firestore', 'Next.js'],
     links: [
@@ -136,138 +50,196 @@ export const projects = [
     ],
   },
   {
-    folder: 'TiroMoMangaung/',
-    title: 'Local Job-Matching Platform',
-    description:
-      'Cross-platform Flutter + Firebase job marketplace connecting job seekers with employers in the Mangaung region, a localised take on LinkedIn and Indeed. Real-time listings are location-aware and show the distance to each job.',
-    bullets: [
-      'Job seekers: profiles, filtered job search, saved jobs, CV uploads and application tracking',
-      'Employers: company verification, job posting, candidate review and interview scheduling',
-      'Real-time Firestore, push notifications, offline support and role-based security rules',
-    ],
-    tech: ['Flutter', 'Firebase Auth', 'Firestore', 'Firebase Storage', 'Push Notifications'],
-    links: [{ label: 'source', href: 'https://github.com/Jabulile1704/TiroMoMangaung' }],
+    id: 'prayer',
+    name: 'Mashibini Prayer',
+    tagline: 'A daily prayer app',
+    status: 'Under construction',
+    upcoming: true,
+    description: 'Early days, still being built.',
+    tech: ['Flutter', 'Firebase'],
+    links: [{ label: 'repo', href: 'https://github.com/Jabulile1704/Mashibini-Prayer' }],
   },
   {
-    folder: 'FreshFadez/',
-    title: 'Salon Appointment Booking App',
+    id: 'robotoremote',
+    name: 'RobotoRemote',
+    tagline: 'A desktop remote for an Arduino Uno',
     description:
-      'Flutter front-end prototype for a hair salon booking app. Clients sign in, browse services and the stylist team, and manage their appointments from a clean, animated mobile UI. The UI is designed first, with the booking backend next on the roadmap.',
-    bullets: [
-      'Screens for login, home, services, "Our Team", my appointments and profile',
-      'Appointment list with status, pricing, and edit/cancel actions',
-      'Typed models for salons, services, stylists and appointments, plus custom animated widgets (spinning salon cards, animated login button)',
-    ],
-    tech: ['Flutter', 'Dart', 'Material Design', 'UI/UX'],
-    links: [{ label: 'source', href: 'https://github.com/Jabulile1704/fresh_fadez' }],
-  },
-  {
-    folder: 'MzansiPayrollSystem/',
-    title: 'Tested Payroll Management System',
-    description:
-      'C# Windows Forms payroll app for contractors that applies South African payroll rules: gross pay, UIF, PAYE with a dependant rebate, and a membership fee. It was built to be provably correct, with the business logic kept separate from the UI and tested at every level.',
-    bullets: [
-      'PayrollCalculator class kept separate from the WinForms UI for testability',
-      '6 MSTest tests covering unit, integration and full system workflows, all passing',
-      'Input validation with clear error messages and test logging via TestContext',
-    ],
-    tech: ['C#', '.NET Framework', 'Windows Forms', 'MSTest'],
-    links: [{ label: 'source', href: 'https://github.com/Jabulile1704/MzansiPayrollSystem' }],
-  },
-  {
-    folder: 'RobotoRemote/',
-    title: 'Arduino LED Remote Controller',
-    description:
-      'Windows Forms desktop app that controls an Arduino Uno over USB serial. Each button sends a command string over the COM port, and the Arduino sketch parses it to switch four LEDs on a breadboard, bridging desktop software with physical hardware.',
+      'Windows Forms app that talks to an Arduino over USB serial. Each button sends a command string over the COM port and the sketch switches one of four LEDs on a breadboard.',
     bullets: [
       'COM port picker, live connection status and a clean port release on close',
       'Individual and all-on/all-off LED control over a 9600-baud serial protocol',
       'Arduino C++ sketch that parses newline-terminated commands into pin writes',
     ],
     tech: ['C#', 'Windows Forms', 'Arduino', 'C++', 'Serial / USB'],
-    links: [{ label: 'source', href: 'https://github.com/Jabulile1704/RobotoRemote' }],
+    links: [{ label: 'repo', href: 'https://github.com/Jabulile1704/RobotoRemote' }],
+  },
+  {
+    id: 'robotics',
+    name: 'Robotics Intro',
+    tagline: 'A non-blocking Arduino state machine',
+    description:
+      'One button does three jobs: tap to start, double-tap to stop, hold for two seconds to reset. Meanwhile a servo sweeps, an ultrasonic sensor tracks distance live and an LCD runs a startup countdown.',
+    tech: ['C++', 'Arduino', 'Servo', 'Ultrasonic sensor', 'LCD'],
+    links: [{ label: 'repo', href: 'https://github.com/Jabulile1704/Robotics_Intro' }],
+  },
+  {
+    id: 'mzansi',
+    name: 'MzansiPayrollSystem',
+    tagline: 'A payroll system built to be provably correct',
+    description:
+      'C# Windows Forms payroll for contractors using South African rules: gross pay, UIF, PAYE with a dependant rebate, and a membership fee. The business logic is kept apart from the UI and tested at every level.',
+    bullets: [
+      'PayrollCalculator class separated from the WinForms UI so it can be tested on its own',
+      'MSTest suite covering unit, integration and full system workflows, all passing',
+      'Input validation with clear error messages and test logging through TestContext',
+    ],
+    tech: ['C#', '.NET Framework', 'Windows Forms', 'MSTest'],
+    links: [{ label: 'repo', href: 'https://github.com/Jabulile1704/MzansiPayrollSystem' }],
+  },
+  {
+    id: 'unittesting',
+    name: 'UnitTesting',
+    tagline: 'Unit testing exercises in C#',
+    description: 'Automated tests, assertions and checking that the code does what it claims to.',
+    tech: ['C#', '.NET'],
+    links: [{ label: 'repo', href: 'https://github.com/Jabulile1704/UnitTesting-Exercise' }],
+  },
+  {
+    id: 'freshfadez',
+    name: 'FreshFadez',
+    tagline: 'Salon appointment booking app',
+    description:
+      'Flutter front end for a hair salon. Clients sign in, browse services and the stylist team, and manage their appointments from an animated mobile UI. The booking backend is next.',
+    bullets: [
+      'Login, home, services, “Our Team”, appointments and profile screens',
+      'Appointment list with status, pricing in Rand, and edit or cancel actions',
+      'Typed models for salons, services, stylists and appointments, plus custom animated widgets',
+    ],
+    tech: ['Flutter', 'Dart', 'Material Design'],
+    links: [{ label: 'repo', href: 'https://github.com/Jabulile1704/fresh_fadez' }],
+  },
+  {
+    id: 'tiro',
+    name: 'TiroMoMangaung',
+    tagline: 'A local job board that knows how far away each job is',
+    description:
+      'Flutter and Firebase marketplace connecting job seekers with employers around Mangaung. Listings update in real time and show the distance to each job.',
+    bullets: [
+      'Job seekers: profiles, filtered search, saved jobs, CV uploads and application tracking',
+      'Employers: company verification, job posting, candidate review and interview scheduling',
+      'Real-time Firestore, push notifications, offline support and role-based security rules',
+    ],
+    tech: ['Flutter', 'Firebase Auth', 'Firestore', 'Firebase Storage', 'Push notifications'],
+    links: [{ label: 'repo', href: 'https://github.com/Jabulile1704/TiroMoMangaung' }],
+  },
+  {
+    id: 'az104',
+    name: 'AZ-104 Labs',
+    tagline: 'Azure administration, done by hand',
+    description:
+      'Labs covering identity, governance, compute, storage and virtual networking, written up so someone else can follow them.',
+    tech: ['Azure', 'Entra ID', 'Virtual networking'],
+    links: [{ label: 'repo', href: 'https://github.com/Jabulile1704/azure-virtual-networking' }],
   },
 ]
 
-export const experience = [
+// Career line, newest first
+export const career = [
   {
-    hash: 'a7f3e2d',
-    period: '2026 – Present',
+    id: 'ctu',
+    period: '2026 – now',
     role: 'Software Engineering Facilitator',
-    company: 'CTU Training Solutions',
+    place: 'CTU Training Solutions',
     current: true,
     bullets: [
-      'Deliver NQF Level 6 modules in software design & testing with C# and Java',
-      'Teach ASP.NET/.NET development, Git/GitHub, and code review practices',
-      'Built AZ-204 bootcamp labs with C# and ASP.NET Core',
-      'Facilitate SDLC, Agile, and software testing & QA training',
+      'Deliver NQF Level 6 modules in software design and testing with C# and Java',
+      'Teach ASP.NET/.NET development, Git and GitHub workflow, and code review',
+      'Built the AZ-204 bootcamp labs in C# and ASP.NET Core',
+      'Facilitate SDLC, Agile, and software testing and QA',
     ],
   },
   {
-    hash: '3c91b04',
+    id: 'wwise',
     period: '2025 – 2026',
     role: 'Software Development Facilitator',
-    company: 'WWISE',
-    current: false,
+    place: 'WWISE',
     bullets: [
-      'Delivered training in Python, JavaScript, HTML/CSS, and SQL',
-      'Taught Web API design & consumption and modern web fundamentals',
-      'Facilitated Power BI and PowerApps for data-driven & low-code solutions',
+      'Taught Python, JavaScript, HTML/CSS and SQL',
+      'Covered designing and consuming web APIs',
+      'Facilitated Power BI and PowerApps for data and low-code work',
     ],
   },
-]
-
-export const globeCodes = [
-  'AZ-204', 'AI-200', 'AZ-104', 'AZ-140', 'AZ-900', 'SC-300', 'SC-200', 'SC-900',
-  'DP-700', 'DP-900', 'PL-300', 'AWS', 'OCI', 'CISCO', 'ISO', 'MCT',
-]
-
-export const certSummary = [
-  { count: '11×', label: 'Microsoft Certified' },
-  { count: '1×', label: 'Microsoft Certified Trainer (MCT)' },
-  { count: '1×', label: 'AWS Cloud Practitioner' },
-  { count: '1×', label: 'Oracle Cloud Foundations' },
-  { count: '1×', label: 'Cisco Python Essentials' },
-  { count: '1×', label: 'ISO/IEC 27001:2022' },
-]
-
-const azIcon = dev('azure/azure-original')
-const isoIcon =
-  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='%233fe07f' stroke-width='2'/%3E%3Cpath d='M7.5 12.5l3 3 6-6.5' fill='none' stroke='%233fe07f' stroke-width='2'/%3E%3C/svg%3E"
-
-export const certs = [
-  { code: 'AZ-204', name: 'Azure Developer Associate', icon: azIcon },
-  { code: 'AI-200', name: 'Azure AI Cloud Developer Associate', icon: azIcon },
-  { code: 'AZ-104', name: 'Azure Administrator Associate', icon: azIcon },
-  { code: 'AZ-140', name: 'Azure Virtual Desktop Specialty', icon: azIcon },
-  { code: 'AZ-900', name: 'Azure Fundamentals', icon: azIcon },
-  { code: 'SC-300', name: 'Identity & Access Administrator Associate', icon: azIcon },
-  { code: 'SC-200', name: 'Security Operations Analyst Associate', icon: azIcon },
-  { code: 'SC-900', name: 'Security, Compliance & Identity Fundamentals', icon: azIcon },
-  { code: 'DP-700', name: 'Fabric Data Engineer Associate', icon: azIcon },
-  { code: 'DP-900', name: 'Azure Data Fundamentals', icon: azIcon },
-  { code: 'PL-300', name: 'Power BI Data Analyst Associate', icon: azIcon },
-  { code: 'AWS', name: 'Certified Cloud Practitioner', icon: dev('amazonwebservices/amazonwebservices-plain-wordmark') },
-  { code: 'OCI', name: 'Oracle Cloud Infrastructure Foundations', icon: dev('oracle/oracle-original') },
-  { code: 'CISCO', name: 'Python Essentials 1 & 2', icon: si('cisco', '62d9d0') },
-  { code: 'ISO', name: '27001:2022 InfoSec Implementation', icon: isoIcon },
-  { code: 'MCT', name: 'Microsoft Certified Trainer', icon: azIcon },
-]
-
-export const education = [
   {
+    id: 'cut-adv',
     period: '2024 – 2025',
-    title: 'Advanced Diploma in Information Technology',
-    institution: 'Central University of Technology',
+    role: 'Advanced Diploma in Information Technology',
+    place: 'Central University of Technology',
   },
   {
+    id: 'cut',
     period: '2020 – 2023',
-    title: 'Diploma in Information Technology',
-    institution: 'Central University of Technology',
+    role: 'Diploma in Information Technology',
+    place: 'Central University of Technology',
   },
 ]
 
-export const contactIcons = {
-  github: si('github', '6dff9e'),
-  linkedin: dev('linkedin/linkedin-original'),
-}
+export const careerExtras = ['Microsoft Certified Trainer', 'Registered ETDP SETA Assessor']
+
+// Cert line, grouped the same way as the stops on the map
+export const certGroups = [
+  {
+    stop: 'Fundamentals',
+    certs: [
+      ['AZ-900', 'Azure Fundamentals'],
+      ['SC-900', 'Security, Compliance & Identity Fundamentals'],
+      ['DP-900', 'Azure Data Fundamentals'],
+      ['Cisco', 'Python Essentials 1 & 2'],
+    ],
+  },
+  {
+    stop: 'Other clouds',
+    certs: [
+      ['AWS', 'Certified Cloud Practitioner'],
+      ['OCI', 'Oracle Cloud Infrastructure Foundations'],
+    ],
+  },
+  {
+    stop: 'Associate',
+    certs: [
+      ['AZ-104', 'Azure Administrator'],
+      ['AZ-204', 'Azure Developer'],
+      ['AI-200', 'Azure AI Cloud Developer'],
+      ['DP-700', 'Fabric Data Engineer'],
+      ['PL-300', 'Power BI Data Analyst'],
+    ],
+  },
+  {
+    stop: 'Specialty',
+    certs: [['AZ-140', 'Azure Virtual Desktop']],
+  },
+  {
+    stop: 'Security',
+    certs: [
+      ['SC-200', 'Security Operations Analyst'],
+      ['SC-300', 'Identity & Access Administrator'],
+      ['ISO', 'ISO/IEC 27001:2022 Implementation'],
+    ],
+  },
+  {
+    stop: 'Interchange',
+    certs: [['MCT', 'Microsoft Certified Trainer']],
+  },
+]
+
+export const certCount = certGroups.reduce((n, g) => n + g.certs.length, 0)
+
+export const toolbox = [
+  'C#', 'ASP.NET Core', 'Java', 'Dart', 'Flutter', 'Python', 'JavaScript', 'TypeScript', 'SQL',
+  'PostgreSQL', 'Firebase', 'Next.js', 'Azure', 'AWS', 'GitHub Actions', 'Arduino', 'Linux',
+]
+
+export const nowBoarding = [
+  'CI/CD with GitHub Actions and Azure DevOps',
+  'Clean architecture in Flutter',
+  'Cloud security',
+]
