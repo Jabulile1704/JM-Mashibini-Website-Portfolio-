@@ -21,16 +21,18 @@ const build = [
   { x: 570, id: 'mzansi', sub: 'C# · WinForms · MSTest', up: true },
   { x: 670, id: 'robotics', sub: 'Arduino · C++' },
   { x: 765, id: 'robotoremote', sub: 'C# ↔ Arduino', up: true },
-  { x: 850, id: 'motiroong', sub: 'gov client · in build', big: true },
-  { x: 940, id: 'prayer', sub: 'daily prayer app', up: true, anchor: 'end', dashed: true, labelX: 952 },
+  { x: 860, id: 'yetsa', sub: 'Swift · SwiftUI' },
+  { x: 960, id: 'zaka', sub: 'Swift · SwiftData', up: true },
+  { x: 1060, id: 'motiroong', sub: 'gov client · in build', big: true },
+  { x: 1150, id: 'prayer', sub: 'daily prayer app', up: true, anchor: 'end', dashed: true, labelX: 1162 },
 ].map((s) => ({ ...s, y: BY, name: builds.find((b) => b.id === s.id).name, href: `#build-${s.id}` }))
 
 const cert = [
   { x: 60, name: 'Fundamentals', sub: 'AZ/SC/DP-900 · Cisco', anchor: 'start' },
-  { x: 215, name: 'AWS · OCI', sub: 'CCP · OCI Foundations', up: true },
-  { x: 370, name: 'Associate ×5', sub: 'AZ-104 AZ-204 AI-200 DP-700 PL-300' },
-  { x: 525, name: 'AZ-140', sub: 'Virtual Desktop specialty', up: true },
-  { x: 680, name: 'Security', sub: 'SC-200 SC-300 ISO 27001' },
+  { x: 260, name: 'AWS · OCI', sub: 'CCP · OCI Foundations', up: true },
+  { x: 460, name: 'Associate ×5', sub: 'AZ-104 AZ-204 AI-200 DP-700 PL-300' },
+  { x: 660, name: 'AZ-140', sub: 'Virtual Desktop specialty', up: true },
+  { x: 860, name: 'Security', sub: 'SC-200 SC-300 ISO 27001' },
 ].map((s) => ({ ...s, y: XY, href: '#certs' }))
 
 const LINES = [
@@ -108,19 +110,19 @@ export default function TransitMap() {
       <div className="tm__scroll">
         <svg
           className="tm__svg"
-          viewBox="0 118 1000 572"
+          viewBox="0 118 1200 572"
           role="group"
           aria-label="Transit map of career, build and certification lines. Each station links to its section."
         >
           <g className="tm-line tm-career" data-dim={dim('career')}>
-            <path d={`M60 ${CY} H310 Q370 ${CY} 370 ${CY + 70} V${CY2 - 70} Q370 ${CY2} 440 ${CY2} H900`} />
+            <path d={`M60 ${CY} H310 Q370 ${CY} 370 ${CY + 70} V${CY2 - 70} Q370 ${CY2} 440 ${CY2} H1110`} />
           </g>
           <g className="tm-line tm-build" data-dim={dim('build')}>
-            <path d={`M60 ${BY} H850`} />
-            <path d={`M850 ${BY} H940`} className="tm-dotted" />
+            <path d={`M60 ${BY} H1060`} />
+            <path d={`M1060 ${BY} H1150`} className="tm-dotted" />
           </g>
           <g className="tm-line tm-cert" data-dim={dim('cert')}>
-            <path d={`M60 ${XY} H830 Q900 ${XY} 900 ${XY - 70} V${CY2 + 10}`} />
+            <path d={`M60 ${XY} H1040 Q1110 ${XY} 1110 ${XY - 70} V${CY2 + 10}`} />
           </g>
 
           {career.map((s) => (
@@ -133,7 +135,7 @@ export default function TransitMap() {
             <Station key={s.name} s={s} line="cert" {...props} />
           ))}
           <Interchange x={370} y={BY} name="CTU" sub="facilitator · now" href="#career-ctu" labelX={388} labelY={BY + 74} anchor="start" {...props} />
-          <Interchange x={900} y={CY2} name="MCT" sub="certified trainer" href="#certs" labelX={900} labelY={CY2 - 34} {...props} />
+          <Interchange x={1110} y={CY2} name="MCT" sub="certified trainer" href="#certs" labelX={1110} labelY={CY2 - 34} {...props} />
         </svg>
       </div>
 
