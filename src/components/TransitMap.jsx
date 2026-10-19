@@ -24,7 +24,7 @@ const build = [
   { x: 860, id: 'yetsa', sub: 'Swift · SwiftUI' },
   { x: 960, id: 'zaka', sub: 'Swift · SwiftData', up: true },
   { x: 1050, id: 'motiroong', sub: 'gov client · in build', big: true },
-  { x: 1140, id: 'prayer', sub: 'daily prayer app', up: true, anchor: 'end', dashed: true, labelX: 1152 },
+  { x: 1140, id: 'prayer', sub: 'family prayer rota', up: true, anchor: 'end', dashed: true, labelX: 1152 },
 ].map((s) => ({ ...s, y: BY, name: builds.find((b) => b.id === s.id).name, href: `#build-${s.id}` }))
 
 const cert = [

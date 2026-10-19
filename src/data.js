@@ -84,10 +84,16 @@ export const builds = [
   {
     id: 'prayer',
     name: 'Mashibini Prayer',
-    tagline: 'A daily prayer app',
-    status: 'Under construction',
+    tagline: 'Whose week it is to lead family prayer',
+    status: 'In build',
     upcoming: true,
-    description: 'Early days, still being built.',
+    description:
+      'Built around a rota my family already keeps: each of us takes a week to lead family prayer, and the cycle comes back around. The app holds the cycle so nobody has to remember whose turn it is, with a daily verse and a prayer journal alongside it.',
+    bullets: [
+      'The cycle as the home screen: whose week it is now, and who has it next',
+      'A verse for the day',
+      'A prayer journal to write in and come back to',
+    ],
     tech: ['Flutter', 'Firebase'],
     links: [{ label: 'repo', href: 'https://github.com/Jabulile1704/Mashibini-Prayer' }],
   },
