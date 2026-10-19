@@ -18,11 +18,11 @@ export const profile = {
 }
 
 export const heroIntro =
-  'I build full-stack apps, mostly Flutter on the front with Firebase, ASP.NET Core or Azure behind it, and I teach software engineering at CTU Training Solutions. This site is laid out like a train map: one line for the things I have built, one for work, one for certifications.'
+  'I build full-stack apps, mostly Flutter on the front with Firebase, ASP.NET Core or Azure behind it, lately native iOS in Swift and SwiftUI, and I teach software engineering at CTU Training Solutions. This site is laid out like a train map: one line for the things I have built, one for work, one for certifications.'
 
 export const about = [
   'I’m a software engineer and facilitator based in South Africa. During the day I teach C#, Java and full-stack development at CTU Training Solutions. The rest of the time I build complete applications, from requirements and ERDs through to CI/CD and a working release.',
-  'The project I’m proudest of is MoTiroong, a staff attendance platform for the Mangaung Metro Municipality where a clock-in only counts if your location and your fingerprint agree. Before that I built TiroMoMangaung, a job board for my area, and along the way a fully tested payroll system, a desktop remote for an Arduino and a salon booking app.',
+  'The project I’m proudest of is MoTiroong, a staff attendance platform for the Mangaung Metro Municipality where a clock-in only counts if your location and your fingerprint agree. Before that I built TiroMoMangaung, a job board for my area, and along the way a fully tested payroll system, a desktop remote for an Arduino and a salon booking app. Most recently I have been building native iOS apps in Swift: Zaka, an offline-first expense tracker, and Yetsa, a planner that budgets the free windows in a day.',
   'I’m looking for a junior full-stack role where I can ship reliable, well-tested software with a team.',
 ]
 
@@ -48,6 +48,38 @@ export const builds = [
       { label: 'backend', href: 'https://github.com/Jabulile1704/motiroong-backend' },
       { label: 'admin', href: 'https://github.com/Jabulile1704/admin-motiroong' },
     ],
+  },
+  {
+    id: 'zaka',
+    name: 'Zaka',
+    tagline: 'An offline-first expense tracker for iPhone',
+    status: 'Shipped · on-device only',
+    description:
+      'Native iOS expense tracker in SwiftUI and SwiftData. Everything stays on the phone — no account, no network, nothing leaving the device — and the whole log exports as spreadsheet-clean CSV when you want it elsewhere.',
+    bullets: [
+      'SwiftData store, sixteen categories, per-day totals and a month-to-date strip above the glass tab bar',
+      'Insights: month total, spend per day so far and a share-of-spend bar per category, steppable through previous months',
+      'Loyalty cards with vector EAN-13 barcodes drawn by hand, VisionKit scanning and full brightness at the till',
+      'GitHub Actions CI running the pure logic tests with swift test plus the app tests on an iPhone simulator',
+    ],
+    tech: ['Swift', 'SwiftUI', 'SwiftData', 'iOS', 'VisionKit', 'GitHub Actions'],
+    links: [{ label: 'repo', href: 'https://github.com/Jabulile1704/Zaka' }],
+  },
+  {
+    id: 'yetsa',
+    name: 'Yetsa',
+    tagline: 'A planner that knows whether the day can fit the task',
+    status: 'Shipped · on-device only',
+    description:
+      'Sesotho for “to do”. A native iOS planner built on the idea that a day is not an empty list but a fixed scaffold with a few free windows in it. Set your week once and every window says what it can hold, what is planned against it and what is left.',
+    bullets: [
+      'DayPlanner builds the windows from the scaffold, asks the recurrence engine what is due and pours each task into a window that will take it',
+      'Recurrence that keeps its rhythm: date-anchored intervals, weekly quotas, and counting from the day you last did it',
+      'AlarmKit alarms that sound through silent mode and Focus, with a snooze chain capped by a second alarm that offers only Stop',
+      'Estimates correct themselves once three measured completions disagree with the planned time',
+    ],
+    tech: ['Swift', 'SwiftUI', 'SwiftData', 'AlarmKit', 'iOS'],
+    links: [{ label: 'repo', href: 'https://github.com/Jabulile1704/Yetsa' }],
   },
   {
     id: 'prayer',
@@ -234,7 +266,8 @@ export const certGroups = [
 export const certCount = certGroups.reduce((n, g) => n + g.certs.length, 0)
 
 export const toolbox = [
-  'C#', 'ASP.NET Core', 'Java', 'Dart', 'Flutter', 'Python', 'JavaScript', 'TypeScript', 'SQL',
+  'C#', 'ASP.NET Core', 'Java', 'Swift', 'SwiftUI', 'SwiftData', 'Dart', 'Flutter', 'Python',
+  'JavaScript', 'TypeScript', 'SQL',
   'PostgreSQL', 'Firebase', 'Next.js', 'Azure', 'AWS', 'GitHub Actions', 'Arduino', 'Linux',
 ]
 
