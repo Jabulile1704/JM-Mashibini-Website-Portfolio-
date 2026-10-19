@@ -12,7 +12,7 @@ export default function Hero() {
         <p className="hero__corner mono">
           not to scale
           <br />
-          rev. 2026.09
+          rev. 2026.10
         </p>
       </div>
       <p className="hero__intro">{heroIntro}</p>

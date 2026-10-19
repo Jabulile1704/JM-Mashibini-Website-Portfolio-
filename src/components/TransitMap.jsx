@@ -23,8 +23,8 @@ const build = [
   { x: 765, id: 'robotoremote', sub: 'C# ↔ Arduino', up: true },
   { x: 860, id: 'yetsa', sub: 'Swift · SwiftUI' },
   { x: 960, id: 'zaka', sub: 'Swift · SwiftData', up: true },
-  { x: 1060, id: 'motiroong', sub: 'gov client · in build', big: true },
-  { x: 1150, id: 'prayer', sub: 'daily prayer app', up: true, anchor: 'end', dashed: true, labelX: 1162 },
+  { x: 1050, id: 'motiroong', sub: 'gov client · in build', big: true },
+  { x: 1140, id: 'prayer', sub: 'daily prayer app', up: true, anchor: 'end', dashed: true, labelX: 1152 },
 ].map((s) => ({ ...s, y: BY, name: builds.find((b) => b.id === s.id).name, href: `#build-${s.id}` }))
 
 const cert = [
@@ -115,14 +115,14 @@ export default function TransitMap() {
           aria-label="Transit map of career, build and certification lines. Each station links to its section."
         >
           <g className="tm-line tm-career" data-dim={dim('career')}>
-            <path d={`M60 ${CY} H310 Q370 ${CY} 370 ${CY + 70} V${CY2 - 70} Q370 ${CY2} 440 ${CY2} H1110`} />
+            <path d={`M60 ${CY} H310 Q370 ${CY} 370 ${CY + 70} V${CY2 - 70} Q370 ${CY2} 440 ${CY2} H1100`} />
           </g>
           <g className="tm-line tm-build" data-dim={dim('build')}>
-            <path d={`M60 ${BY} H1060`} />
-            <path d={`M1060 ${BY} H1150`} className="tm-dotted" />
+            <path d={`M60 ${BY} H1050`} />
+            <path d={`M1050 ${BY} H1140`} className="tm-dotted" />
           </g>
           <g className="tm-line tm-cert" data-dim={dim('cert')}>
-            <path d={`M60 ${XY} H1040 Q1110 ${XY} 1110 ${XY - 70} V${CY2 + 10}`} />
+            <path d={`M60 ${XY} H1030 Q1100 ${XY} 1100 ${XY - 70} V${CY2 + 10}`} />
           </g>
 
           {career.map((s) => (
@@ -135,7 +135,7 @@ export default function TransitMap() {
             <Station key={s.name} s={s} line="cert" {...props} />
           ))}
           <Interchange x={370} y={BY} name="CTU" sub="facilitator · now" href="#career-ctu" labelX={388} labelY={BY + 74} anchor="start" {...props} />
-          <Interchange x={1110} y={CY2} name="MCT" sub="certified trainer" href="#certs" labelX={1110} labelY={CY2 - 34} {...props} />
+          <Interchange x={1100} y={CY2} name="MCT" sub="certified trainer" href="#certs" labelX={1100} labelY={CY2 - 34} {...props} />
         </svg>
       </div>
 
